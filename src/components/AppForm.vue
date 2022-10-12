@@ -6,7 +6,7 @@
         id="columns"
         type="number"
         min="0"
-        max="12"
+        max="120"
         @input="$store.commit(`updateColumns`, $event.target.value)"
         :value="columns"
       >
@@ -18,7 +18,7 @@
         id="rows"
         type="number"
         min="0"
-        max="12"
+        max="120"
         @input="$store.commit(`updateRows`, $event.target.value)"
         :value="rows"
       >

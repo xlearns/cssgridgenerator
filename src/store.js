@@ -12,9 +12,13 @@ export default new Vuex.Store({
     rowgap: 0,
     colArr: [],
     rowArr: [],
-    childarea: []
+    childarea: [],
+    bg:''
   },
   getters: {
+    getBg(state){
+      return state.bg
+    },
     colTemplate(state) {
       const unitGroups = groupRepeatedUnits(state.colArr);
       return createRepetition(unitGroups);
@@ -28,6 +32,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    setBg(state,url){
+      state.bg = url
+    },
     initialArrIndex(state, payload) {
       if(payload !== '') {
         const queryParams = new URLSearchParams(payload)
